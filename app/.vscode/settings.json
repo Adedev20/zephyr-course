@@ -1,0 +1,16 @@
+{
+  "zephyr-workbench.build.configurations": [
+    {
+      "name": "primary",
+      "board": "black_f407ve",
+      "active": "true",
+      "default-runner": "jlink"
+    }
+  ],
+  "zephyr-workbench.westWorkspace": "${workspaceFolder}/../../zephyrproject",
+  "zephyr-workbench.toolchain": "zephyr",
+  "zephyr-workbench.sdk": "${workspaceFolder}/../../../zephyr-sdk-1.0.1",
+  "zephyr-workbench.intellisense.provider": "cpptools",
+  "cmake.configureOnOpen": false,
+  "cmake.enableAutomaticKitScan": false
+}
