@@ -1,0 +1,61 @@
+# Kconfig
+mainmenu "Blinky Task 1 Configuration"
+
+# 1. Main master switch that acts as a folder menu
+menuconfig APP_LED_SUBSYSTEM
+    bool "LED Subsystem"
+    default y
+
+if APP_LED_SUBSYSTEM
+
+    # 2. Mutually exclusive selection for blink sleep times
+    choice
+        prompt "LED blink sleep time"
+        default APP_BLINK_1S
+
+    config APP_BLINK_500MS
+        bool "500ms (fast)"
+
+    config APP_BLINK_1S
+        bool "1s (medium)"
+
+    config APP_BLINK_2S
+        bool "2s (slow)"
+
+    endchoice
+
+    # 3. Advanced settings folder that acts as an optional toggle block
+    menuconfig APP_ADVANCED_LED
+        bool "Advanced LED settings"
+        default n
+
+    if APP_ADVANCED_LED
+
+        # 4. Integer configurations
+        config APP_LED_BRIGHTNESS
+            int "LED brightness (0-100)"
+            default 100
+
+        config APP_LED_FADE_DURATION
+            int "LED fade duration (ms)"
+            default 500
+
+        # 5. Visual structural sub-menu folder
+        menu "Expert settings"
+
+            config APP_LED_DEBUG
+                bool "Enable LED debugging"
+                default n
+
+            config APP_CUSTOM_BLINK
+                bool "Custom blink pattern"
+                default n
+
+        endmenu
+
+    endif # APP_ADVANCED_LED
+
+endif # APP_LED_SUBSYSTEM
+
+# CRITICAL: Pull in the standard Zephyr system options
+source "Kconfig.zephyr"
