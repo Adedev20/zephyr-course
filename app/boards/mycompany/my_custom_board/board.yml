@@ -1,0 +1,6 @@
+board:
+  name: my_custom_board
+  full_name: My Custom Black STM32 F407VE Development Board
+  vendor: mycompany
+  socs:
+    - name: stm32f407xx
