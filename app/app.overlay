@@ -1,0 +1,7 @@
+
+/ {
+	aliases {
+		/* Points app-led directly to the board's built-in PA6 LED */
+		app-led = &green_led_1;
+	};
+};

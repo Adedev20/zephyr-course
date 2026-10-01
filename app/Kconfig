@@ -55,6 +55,14 @@ if APP_LED_SUBSYSTEM
 
     endif # APP_ADVANCED_LED
 
+    # 6. Standalone Heartbeat Period configuration entry
+    config APP_HEARTBEAT_PERIOD_MS
+        int "Heartbeat period in milliseconds"
+        default 500
+        range 100 2000
+        help
+          Sets the blinking interval for the application's LED status heartbeat.
+
 endif # APP_LED_SUBSYSTEM
 
 # CRITICAL: Pull in the standard Zephyr system options
