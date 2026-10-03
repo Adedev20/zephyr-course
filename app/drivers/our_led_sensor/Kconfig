@@ -1,0 +1,6 @@
+config OUR_LED_SENSOR
+    bool "Custom LED Sensor Driver"
+    default y
+    select GPIO
+    help
+      Enable the custom sensor driver that controls an on-board LED.

@@ -1,7 +1,9 @@
-
 / {
-	aliases {
-		/* Points app-led directly to the board's built-in PA6 LED */
-		app-led = &green_led_1;
-	};
+    my_led_sensor: led_sensor_0 {
+        compatible = "our,led-sensor";
+
+        /* This path points directly to your board's pre-defined led_1 hardware properties */
+        led-gpios = <&{/leds/led_1}>;
+        status = "okay";
+    };
 };
