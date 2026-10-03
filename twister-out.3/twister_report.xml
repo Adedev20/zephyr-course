@@ -1,0 +1,311 @@
+<testsuites>
+	<testsuite name="qemu_x86/atom" timestamp="2026-10-03T23:57:53.712446" time="0.0" tests="8" failures="0" errors="8" skipped="0">
+		<properties>
+			<property name="version" value="v4.4.2" />
+		</properties>
+		<testcase classname="homework.unit.ring_buf" name="homework.unit.ring_buf.ring_buf_push_pop.push_full_returns_enospc" time="0.00">
+			<error type="failure" message="CMake build failure - CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):   C compiler">Loading Zephyr default modules (Zephyr base).
+-- Application: E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf
+-- CMake version: 4.1.2
+-- Found Python3: C:/Users/RadiusNT/.zinstaller/.venv/Scripts/python.exe (found suitable version "3.13.5", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/.cache
+-- Zephyr version: 4.4.2 (E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: qemu_x86, qualifiers: atom
+-- Found host-tools: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found Dtc: C:/Users/RadiusNT/.zinstaller/tools/dtc/usr/bin/dtc.exe (found suitable version "1.7.2", minimum required is "1.4.6")
+-- Found BOARD.dts: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86.dts
+-- Generated zephyr.dts: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/zephyr.dts
+-- Generated pickled edt: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/edt.pickle
+-- Generated devicetree_generated.h: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/Kconfig
+Loaded configuration 'E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86_defconfig'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/prj.conf'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/.config'
+Kconfig header saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/autoconf.h'
+CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):
+  C compiler
+  E:/zephyr-projects/zephyr-sdk-1.0.1/gnu/x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc
+  not found - Please check your toolchain installation
+Call Stack (most recent call first):
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/kernel.cmake:25 (find_package)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/zephyr_default.cmake:138 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:2 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+</error>
+		</testcase>
+		<testcase classname="homework.unit.ring_buf" name="homework.unit.ring_buf.ring_buf_boundaries.peek_does_not_consume" time="0.00">
+			<error type="failure" message="CMake build failure - CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):   C compiler">Loading Zephyr default modules (Zephyr base).
+-- Application: E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf
+-- CMake version: 4.1.2
+-- Found Python3: C:/Users/RadiusNT/.zinstaller/.venv/Scripts/python.exe (found suitable version "3.13.5", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/.cache
+-- Zephyr version: 4.4.2 (E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: qemu_x86, qualifiers: atom
+-- Found host-tools: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found Dtc: C:/Users/RadiusNT/.zinstaller/tools/dtc/usr/bin/dtc.exe (found suitable version "1.7.2", minimum required is "1.4.6")
+-- Found BOARD.dts: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86.dts
+-- Generated zephyr.dts: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/zephyr.dts
+-- Generated pickled edt: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/edt.pickle
+-- Generated devicetree_generated.h: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/Kconfig
+Loaded configuration 'E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86_defconfig'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/prj.conf'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/.config'
+Kconfig header saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/autoconf.h'
+CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):
+  C compiler
+  E:/zephyr-projects/zephyr-sdk-1.0.1/gnu/x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc
+  not found - Please check your toolchain installation
+Call Stack (most recent call first):
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/kernel.cmake:25 (find_package)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/zephyr_default.cmake:138 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:2 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+</error>
+		</testcase>
+		<testcase classname="homework.unit.ring_buf" name="homework.unit.ring_buf.ring_buf_boundaries.pop_null_returns_einval" time="0.00">
+			<error type="failure" message="CMake build failure - CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):   C compiler">Loading Zephyr default modules (Zephyr base).
+-- Application: E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf
+-- CMake version: 4.1.2
+-- Found Python3: C:/Users/RadiusNT/.zinstaller/.venv/Scripts/python.exe (found suitable version "3.13.5", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/.cache
+-- Zephyr version: 4.4.2 (E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: qemu_x86, qualifiers: atom
+-- Found host-tools: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found Dtc: C:/Users/RadiusNT/.zinstaller/tools/dtc/usr/bin/dtc.exe (found suitable version "1.7.2", minimum required is "1.4.6")
+-- Found BOARD.dts: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86.dts
+-- Generated zephyr.dts: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/zephyr.dts
+-- Generated pickled edt: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/edt.pickle
+-- Generated devicetree_generated.h: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/Kconfig
+Loaded configuration 'E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86_defconfig'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/prj.conf'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/.config'
+Kconfig header saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/autoconf.h'
+CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):
+  C compiler
+  E:/zephyr-projects/zephyr-sdk-1.0.1/gnu/x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc
+  not found - Please check your toolchain installation
+Call Stack (most recent call first):
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/kernel.cmake:25 (find_package)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/zephyr_default.cmake:138 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:2 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+</error>
+		</testcase>
+		<testcase classname="homework.unit.ring_buf" name="homework.unit.ring_buf.ring_buf_boundaries.is_full_after_fill" time="0.00">
+			<error type="failure" message="CMake build failure - CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):   C compiler">Loading Zephyr default modules (Zephyr base).
+-- Application: E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf
+-- CMake version: 4.1.2
+-- Found Python3: C:/Users/RadiusNT/.zinstaller/.venv/Scripts/python.exe (found suitable version "3.13.5", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/.cache
+-- Zephyr version: 4.4.2 (E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: qemu_x86, qualifiers: atom
+-- Found host-tools: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found Dtc: C:/Users/RadiusNT/.zinstaller/tools/dtc/usr/bin/dtc.exe (found suitable version "1.7.2", minimum required is "1.4.6")
+-- Found BOARD.dts: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86.dts
+-- Generated zephyr.dts: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/zephyr.dts
+-- Generated pickled edt: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/edt.pickle
+-- Generated devicetree_generated.h: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/Kconfig
+Loaded configuration 'E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86_defconfig'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/prj.conf'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/.config'
+Kconfig header saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/autoconf.h'
+CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):
+  C compiler
+  E:/zephyr-projects/zephyr-sdk-1.0.1/gnu/x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc
+  not found - Please check your toolchain installation
+Call Stack (most recent call first):
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/kernel.cmake:25 (find_package)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/zephyr_default.cmake:138 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:2 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+</error>
+		</testcase>
+		<testcase classname="homework.unit.ring_buf" name="homework.unit.ring_buf.ring_buf_push_pop.fifo_order" time="0.00">
+			<error type="failure" message="CMake build failure - CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):   C compiler">Loading Zephyr default modules (Zephyr base).
+-- Application: E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf
+-- CMake version: 4.1.2
+-- Found Python3: C:/Users/RadiusNT/.zinstaller/.venv/Scripts/python.exe (found suitable version "3.13.5", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/.cache
+-- Zephyr version: 4.4.2 (E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: qemu_x86, qualifiers: atom
+-- Found host-tools: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found Dtc: C:/Users/RadiusNT/.zinstaller/tools/dtc/usr/bin/dtc.exe (found suitable version "1.7.2", minimum required is "1.4.6")
+-- Found BOARD.dts: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86.dts
+-- Generated zephyr.dts: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/zephyr.dts
+-- Generated pickled edt: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/edt.pickle
+-- Generated devicetree_generated.h: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/Kconfig
+Loaded configuration 'E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86_defconfig'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/prj.conf'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/.config'
+Kconfig header saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/autoconf.h'
+CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):
+  C compiler
+  E:/zephyr-projects/zephyr-sdk-1.0.1/gnu/x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc
+  not found - Please check your toolchain installation
+Call Stack (most recent call first):
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/kernel.cmake:25 (find_package)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/zephyr_default.cmake:138 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:2 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+</error>
+		</testcase>
+		<testcase classname="homework.unit.ring_buf" name="homework.unit.ring_buf.ring_buf_init.fresh_state" time="0.00">
+			<error type="failure" message="CMake build failure - CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):   C compiler">Loading Zephyr default modules (Zephyr base).
+-- Application: E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf
+-- CMake version: 4.1.2
+-- Found Python3: C:/Users/RadiusNT/.zinstaller/.venv/Scripts/python.exe (found suitable version "3.13.5", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/.cache
+-- Zephyr version: 4.4.2 (E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: qemu_x86, qualifiers: atom
+-- Found host-tools: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found Dtc: C:/Users/RadiusNT/.zinstaller/tools/dtc/usr/bin/dtc.exe (found suitable version "1.7.2", minimum required is "1.4.6")
+-- Found BOARD.dts: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86.dts
+-- Generated zephyr.dts: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/zephyr.dts
+-- Generated pickled edt: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/edt.pickle
+-- Generated devicetree_generated.h: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/Kconfig
+Loaded configuration 'E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86_defconfig'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/prj.conf'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/.config'
+Kconfig header saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/autoconf.h'
+CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):
+  C compiler
+  E:/zephyr-projects/zephyr-sdk-1.0.1/gnu/x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc
+  not found - Please check your toolchain installation
+Call Stack (most recent call first):
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/kernel.cmake:25 (find_package)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/zephyr_default.cmake:138 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:2 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+</error>
+		</testcase>
+		<testcase classname="homework.unit.ring_buf" name="homework.unit.ring_buf.ring_buf_push_pop.single_push_pop" time="0.00">
+			<error type="failure" message="CMake build failure - CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):   C compiler">Loading Zephyr default modules (Zephyr base).
+-- Application: E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf
+-- CMake version: 4.1.2
+-- Found Python3: C:/Users/RadiusNT/.zinstaller/.venv/Scripts/python.exe (found suitable version "3.13.5", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/.cache
+-- Zephyr version: 4.4.2 (E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: qemu_x86, qualifiers: atom
+-- Found host-tools: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found Dtc: C:/Users/RadiusNT/.zinstaller/tools/dtc/usr/bin/dtc.exe (found suitable version "1.7.2", minimum required is "1.4.6")
+-- Found BOARD.dts: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86.dts
+-- Generated zephyr.dts: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/zephyr.dts
+-- Generated pickled edt: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/edt.pickle
+-- Generated devicetree_generated.h: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/Kconfig
+Loaded configuration 'E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86_defconfig'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/prj.conf'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/.config'
+Kconfig header saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/autoconf.h'
+CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):
+  C compiler
+  E:/zephyr-projects/zephyr-sdk-1.0.1/gnu/x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc
+  not found - Please check your toolchain installation
+Call Stack (most recent call first):
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/kernel.cmake:25 (find_package)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/zephyr_default.cmake:138 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:2 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+</error>
+		</testcase>
+		<testcase classname="homework.unit.ring_buf" name="homework.unit.ring_buf.ring_buf_init.reinit_clears_state" time="0.00">
+			<error type="failure" message="CMake build failure - CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):   C compiler">Loading Zephyr default modules (Zephyr base).
+-- Application: E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf
+-- CMake version: 4.1.2
+-- Found Python3: C:/Users/RadiusNT/.zinstaller/.venv/Scripts/python.exe (found suitable version "3.13.5", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/.cache
+-- Zephyr version: 4.4.2 (E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: qemu_x86, qualifiers: atom
+-- Found host-tools: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (E:/zephyr-projects/zephyr-sdk-1.0.1)
+-- Found Dtc: C:/Users/RadiusNT/.zinstaller/tools/dtc/usr/bin/dtc.exe (found suitable version "1.7.2", minimum required is "1.4.6")
+-- Found BOARD.dts: E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86.dts
+-- Generated zephyr.dts: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/zephyr.dts
+-- Generated pickled edt: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/edt.pickle
+-- Generated devicetree_generated.h: E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/Kconfig
+Loaded configuration 'E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/qemu_x86_defconfig'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/tests/ring_buf/prj.conf'
+Merged configuration 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/.config'
+Kconfig header saved to 'E:/zephyr-projects/zephyr-projects/zephyr-course/twister-out/qemu_x86_atom/zephyr_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/zephyr/include/generated/zephyr/autoconf.h'
+CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):
+  C compiler
+  E:/zephyr-projects/zephyr-sdk-1.0.1/gnu/x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc
+  not found - Please check your toolchain installation
+Call Stack (most recent call first):
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/FindTargetTools.cmake:103 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/kernel.cmake:25 (find_package)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/modules/zephyr_default.cmake:138 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:2 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+</error>
+		</testcase>
+	</testsuite>
+</testsuites>

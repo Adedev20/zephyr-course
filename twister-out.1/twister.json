@@ -1,0 +1,22 @@
+{
+    "environment":{
+        "os":"Windows",
+        "zephyr_version":"v4.4.2",
+        "toolchain":"zephyr/gnu",
+        "commit_date":"2026-08-06T13:20:34-05:00",
+        "run_date":"2026-10-03T22:53:34+00:00",
+        "options":{
+            "help":null,
+            "zephyr_base":null,
+            "quiet":0,
+            "command":"twister",
+            "testsuite_root":[
+                "tests/ring_buf"
+            ],
+            "platform":[
+                "native_sim"
+            ]
+        }
+    },
+    "testsuites":[]
+}

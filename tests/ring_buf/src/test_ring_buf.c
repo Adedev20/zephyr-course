@@ -43,11 +43,24 @@ ZTEST(ring_buf_init, test_fresh_state)
 
 ZTEST(ring_buf_init, test_reinit_clears_state)
 {
-	/* TODO(l8-task1): Push a value, call rb_init(4) again, then
-	 * verify the buffer is empty and count is 0.
-	 * See TEST_SPEC.md "Suite ring_buf_init" #2.
-	 */
-	ztest_test_skip();
+	int val;
+	
+	/* Push an initial value into the buffer to alter internal indexes */
+	int ret = rb_push(10);
+	zassert_equal(ret, 0, "Initial push failed during reinitialization setup");
+	zassert_false(rb_is_empty(), "Buffer should report not empty after single push");
+	zassert_equal(rb_count(), 1, "Buffer count should be 1 after single push");
+
+	/* Trigger reinitialization to clear state out cleanly */
+	rb_init(4);
+
+	/* Verify the buffer has dropped back down to initial empty states */
+	zassert_true(rb_is_empty(), "Reinitialization failed to mark the buffer empty");
+	zassert_equal(rb_count(), 0, "Reinitialization failed to drop count bounds to 0");
+	
+	/* Attempting to pop must now fail since it should be completely blank */
+	ret = rb_pop(&val);
+	zassert_not_equal(ret, 0, "Pop allowed processing reading from a freshly reset context");
 }
 
 /*
@@ -61,28 +74,54 @@ ZTEST_SUITE(ring_buf_push_pop, NULL, NULL, before, NULL, NULL);
 
 ZTEST(ring_buf_push_pop, test_single_push_pop)
 {
-	/* TODO(l8-task1): rb_push(42), rb_pop(&v) -> v == 42, buffer empty after.
-	 * See TEST_SPEC.md "Suite ring_buf_push_pop" #1.
-	 */
-	ztest_test_skip();
+	int v = 0;
+	
+	/* Perform single value assignment checks */
+	int ret = rb_push(42);
+	zassert_equal(ret, 0, "Push operation failed to store value 42 inside allocation bounds");
+
+	/* Extract value and assert data integration metrics stay intact */
+	ret = rb_pop(&v);
+	zassert_equal(ret, 0, "Pop operation failed unexpectedly while extracting valid index item");
+	zassert_equal(v, 42, "Extracted data variable contents corrupt! Expected 42, got %d", v);
+	
+	/* Check boundary metrics are cleared */
+	zassert_true(rb_is_empty(), "Buffer state tracks residual items remaining after matching pop calls");
 }
 
 ZTEST(ring_buf_push_pop, test_fifo_order)
 {
-	/* TODO(l8-task1): rb_push(1), rb_push(2), rb_push(3); pop three times
-	 * and verify the values come out as 1, 2, 3 in that order.
-	 * See TEST_SPEC.md "Suite ring_buf_push_pop" #2.
-	 */
-	ztest_test_skip();
+	int v1 = 0, v2 = 0, v3 = 0;
+
+	/* Sequential waterfall push array simulation mapping 1, 2, 3 */
+	zassert_equal(rb_push(1), 0, "Failed to push item 1");
+	zassert_equal(rb_push(2), 0, "Failed to push item 2");
+	zassert_equal(rb_push(3), 0, "Failed to push item 3");
+
+	/* Extract and verify First-In, First-Out sequence preservation */
+	zassert_equal(rb_pop(&v1), 0, "Failed to extract index 0 element");
+	zassert_equal(v1, 1, "First structural layout queue extraction broken. Expected 1, got %d", v1);
+
+	zassert_equal(rb_pop(&v2), 0, "Failed to extract index 1 element");
+	zassert_equal(v2, 2, "Second structural layout queue extraction broken. Expected 2, got %d", v2);
+
+	zassert_equal(rb_pop(&v3), 0, "Failed to extract index 2 element");
+	zassert_equal(v3, 3, "Third structural layout queue extraction broken. Expected 3, got %d", v3);
 }
 
 ZTEST(ring_buf_push_pop, test_push_full_returns_enospc)
 {
-	/* TODO(l8-task1): Fill the buffer to its capacity of 4, then push
-	 * one more value -> -ENOSPC.
-	 * See TEST_SPEC.md "Suite ring_buf_push_pop" #3.
-	 */
-	ztest_test_skip();
+	/* Pack the buffer elements up to the explicit structural capacity boundary (4) */
+	zassert_equal(rb_push(100), 0, "Failed to load block 1");
+	zassert_equal(rb_push(200), 0, "Failed to load block 2");
+	zassert_equal(rb_push(300), 0, "Failed to load block 3");
+	zassert_equal(rb_push(400), 0, "Failed to load block 4");
+
+	/* Attempt illegal extra item write operation across maximum boundary line */
+	int ret = rb_push(500);
+	
+	/* Assert error code matches standard No Space allocation rules */
+	zassert_equal(ret, -ENOSPC, "Buffer accepted write operations over its fixed size parameters. Code: %d", ret);
 }
 
 /*
@@ -96,25 +135,43 @@ ZTEST_SUITE(ring_buf_boundaries, NULL, NULL, before, NULL, NULL);
 
 ZTEST(ring_buf_boundaries, test_peek_does_not_consume)
 {
-	/* TODO(l8-task1): rb_push(7); rb_peek(&v) -> v == 7; rb_peek(&v) again
-	 * -> v == 7; rb_count() still == 1.
-	 * See TEST_SPEC.md "Suite ring_buf_boundaries" #1.
-	 */
-	ztest_test_skip();
+	int v = 0;
+	
+	zassert_equal(rb_push(7), 0, "Failed to push initial data parameter 7 into tracking block");
+
+	/* First look without extraction index advancement */
+	int ret = rb_peek(&v);
+	zassert_equal(ret, 0, "First execution pass profile for peek macro failed");
+	zassert_equal(v, 7, "First check corrupt. Expected data variable contents 7, got %d", v);
+
+	/* Second non-destructive verification look */
+	v = 0; // Clear locally to isolate confirmation passes
+	ret = rb_peek(&v);
+	zassert_equal(ret, 0, "Second execution pass profile for peek macro failed");
+	zassert_equal(v, 7, "Second check corrupt. Expected data variable contents 7, got %d", v);
+
+	/* Prove structural tracking counters were completely unimpacted by peek look routines */
+	zassert_equal(rb_count(), 1, "Internal layout indicators advanced or dropped state metrics during peek reads");
 }
 
 ZTEST(ring_buf_boundaries, test_pop_null_returns_einval)
 {
-	/* TODO(l8-task1): rb_pop(NULL) -> -EINVAL.
-	 * See TEST_SPEC.md "Suite ring_buf_boundaries" #2.
-	 */
-	ztest_test_skip();
+	/* Passing NULL must activate validation guards returning Invalid Parameter Error */
+	int ret = rb_pop(NULL);
+	zassert_equal(ret, -EINVAL, "Buffer parsed NULL context reference handle without throwing an error code exception. Code: %d", ret);
 }
 
 ZTEST(ring_buf_boundaries, test_is_full_after_fill)
 {
-	/* TODO(l8-task1): push 4 values -> rb_is_full() == true, rb_count() == 4.
-	 * See TEST_SPEC.md "Suite ring_buf_boundaries" #3.
-	 */
-	ztest_test_skip();
+	zassert_false(rb_is_full(), "Empty structural tracker incorrectly marked full at initial test block boot");
+
+	/* Load maximum size boundary metrics */
+	rb_push(1);
+	rb_push(2);
+	rb_push(3);
+	rb_push(4);
+
+	/* Assert parameters validate completely packed states accurately */
+	zassert_true(rb_is_full(), "Internal flag verification evaluation did not register completely full capacities");
+	zassert_equal(rb_count(), 4, "Total registered storage indicators mismatch fixed allocation space tracking lengths");
 }

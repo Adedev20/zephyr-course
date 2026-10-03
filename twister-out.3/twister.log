@@ -1,0 +1,48 @@
+2026-10-03 23:57:48,321 - twister - INFO - Using Ninja..
+2026-10-03 23:57:49,024 - twister - INFO - Zephyr version: v4.4.2
+2026-10-03 23:57:49,158 - twister - DEBUG - Running cmake script e:\zephyr-projects\zephyr-projects\zephyrproject\deps\zephyr\cmake\verify-toolchain.cmake
+2026-10-03 23:57:49,163 - twister - DEBUG - Calling cmake: ['C:\\Users\\RadiusNT\\.zinstaller\\tools\\cmake\\bin\\cmake.EXE', '-DFORMAT=json', '-P', 'e:\\zephyr-projects\\zephyr-projects\\zephyrproject\\deps\\zephyr\\cmake\\verify-toolchain.cmake']
+2026-10-03 23:57:50,771 - twister - DEBUG - Finished running e:\zephyr-projects\zephyr-projects\zephyrproject\deps\zephyr\cmake\verify-toolchain.cmake
+2026-10-03 23:57:50,771 - twister - INFO - Using 'zephyr/gnu' toolchain variant.
+2026-10-03 23:57:53,693 - twister - DEBUG - Reading testsuite configuration files under E:\zephyr-projects\zephyr-projects\zephyr-course\tests\ring_buf...
+2026-10-03 23:57:53,693 - twister - DEBUG - Found possible testsuite in E:\zephyr-projects\zephyr-projects\zephyr-course\tests\ring_buf
+2026-10-03 23:57:53,700 - twister - DEBUG - No duplicates found.
+2026-10-03 23:57:53,700 - twister - DEBUG -  platform filter: ['qemu_x86']
+2026-10-03 23:57:53,700 - twister - DEBUG - platform_pattern: []
+2026-10-03 23:57:53,700 - twister - DEBUG -    vendor filter: []
+2026-10-03 23:57:53,700 - twister - DEBUG -      arch_filter: None
+2026-10-03 23:57:53,700 - twister - DEBUG -       tag_filter: None
+2026-10-03 23:57:53,700 - twister - DEBUG -      exclude_tag: None
+2026-10-03 23:57:53,700 - twister - DEBUG - Checking platform filter: ['qemu_x86']
+2026-10-03 23:57:53,701 - twister - INFO - Building initial testsuite list...
+2026-10-03 23:57:53,711 - twister - INFO - Built testsuite list in 0.01 seconds
+2026-10-03 23:57:53,712 - twister - INFO - Writing JSON report E:\zephyr-projects\zephyr-projects\zephyr-course\twister-out\testplan.json
+2026-10-03 23:57:53,990 - twister - INFO - Adding tasks to the queue...
+2026-10-03 23:57:53,991 - twister - DEBUG - adding qemu_x86/atom\zephyr/gnu\homework.unit.ring_buf
+2026-10-03 23:57:54,731 - twister - INFO - Added initial list of jobs to queue
+2026-10-03 23:57:55,329 - twister - DEBUG - Launched 4 jobs
+2026-10-03 23:57:56,624 - twister - DEBUG - Running cmake on E:\zephyr-projects\zephyr-projects\zephyr-course\tests\ring_buf for qemu_x86/atom
+2026-10-03 23:57:56,629 - twister - DEBUG - Calling cmake: ['C:\\Users\\RadiusNT\\.zinstaller\\tools\\cmake\\bin\\cmake.EXE', '-BE:\\zephyr-projects\\zephyr-projects\\zephyr-course\\twister-out\\qemu_x86_atom\\zephyr_gnu\\zephyr-course\\tests\\ring_buf\\homework.unit.ring_buf', '-DTC_RUNID=8a8491d21c0f07215ff7ddc5b618289f', '-DTC_NAME=homework.unit.ring_buf', '-DCONFIG_COMPILER_WARNINGS_AS_ERRORS=y', '-DEXTRA_GEN_EDT_ARGS=--edtlib-Werror', '-GNinja', '-DPython3_EXECUTABLE=C:/Users/RadiusNT/.zinstaller/.venv/Scripts/python.exe', '-DZEPHYR_TOOLCHAIN_VARIANT=zephyr/gnu', '-SE:\\zephyr-projects\\zephyr-projects\\zephyr-course\\tests\\ring_buf', '-DQEMU_PIPE=E:\\zephyr-projects\\zephyr-projects\\zephyr-course\\twister-out\\qemu_x86_atom\\zephyr_gnu\\zephyr-course\\tests\\ring_buf\\homework.unit.ring_buf\\qemu-fifo', '-DBOARD=qemu_x86/atom']
+2026-10-03 23:58:17,256 - twister - ERROR - CMake build failure: E:\zephyr-projects\zephyr-projects\zephyr-course\tests\ring_buf for qemu_x86/atom
+2026-10-03 23:58:17,262 - twister - ERROR - qemu_x86/atom             homework.unit.ring_buf                             [31mERROR[39m: CMake build failure
+2026-10-03 23:58:17,263 - twister - ERROR - see: [33mE:\zephyr-projects\zephyr-projects\zephyr-course\twister-out\qemu_x86_atom\zephyr_gnu\zephyr-course\tests\ring_buf\homework.unit.ring_buf\build.log[39m
+2026-10-03 23:58:17,401 - twister - INFO - 1 test scenarios (1 configurations) selected, 0 configurations filtered (0 by static filter, 0 at runtime).
+2026-10-03 23:58:17,482 - twister - INFO - [32m0 of 1[39m executed test configurations passed (0.00%), 0 built (not run), 0 failed, [31m1[39m errored, with no warnings in 29.16 seconds.
+2026-10-03 23:58:17,483 - twister - INFO - 0 of 8 executed test cases passed (0.00%), 8 errored on 1 out of total 1473 platforms (0.07%).
+2026-10-03 23:58:17,483 - twister - INFO - [32m0[39m test configurations executed on platforms, [36m1[39m test configurations were only built.
+2026-10-03 23:58:17,483 - twister - INFO - Saving reports...
+2026-10-03 23:58:17,483 - twister - INFO - Writing JSON report E:\zephyr-projects\zephyr-projects\zephyr-course\twister-out\twister.json
+2026-10-03 23:58:17,486 - twister - INFO - Writing xunit report E:\zephyr-projects\zephyr-projects\zephyr-course\twister-out\twister.xml...
+2026-10-03 23:58:17,491 - twister - INFO - Writing xunit report E:\zephyr-projects\zephyr-projects\zephyr-course\twister-out\twister_report.xml...
+2026-10-03 23:58:17,501 - twister - INFO - -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+2026-10-03 23:58:17,501 - twister - INFO - The following issues were found (showing the top 10 items):
+2026-10-03 23:58:17,502 - twister - INFO - 1) homework.unit.ring_buf on qemu_x86/atom error (CMake build failure - CMake Error at E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/cmake/compiler/gcc/target.cmake:11 (message):   C compiler)
+2026-10-03 23:58:17,503 - twister - INFO - 
+2026-10-03 23:58:17,505 - twister - INFO - To rerun the tests, call twister using the following commandline:
+2026-10-03 23:58:17,506 - twister - INFO - west twister -p <PLATFORM> -s <TEST ID>, for example:
+2026-10-03 23:58:17,506 - twister - INFO - 
+2026-10-03 23:58:17,507 - twister - INFO - west twister -p qemu_x86/atom -s homework.unit.ring_buf
+2026-10-03 23:58:17,507 - twister - INFO - or with west:
+2026-10-03 23:58:17,507 - twister - INFO - west build -p -b qemu_x86/atom tests\ring_buf -T homework.unit.ring_buf
+2026-10-03 23:58:17,508 - twister - INFO - -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+2026-10-03 23:58:17,508 - twister - INFO - Run completed

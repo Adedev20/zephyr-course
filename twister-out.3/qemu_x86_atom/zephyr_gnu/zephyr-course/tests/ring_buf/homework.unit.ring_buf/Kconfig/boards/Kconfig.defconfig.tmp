@@ -1,0 +1,2 @@
+# Load Zephyr board defconfig descriptions.
+osource "E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/Kconfig.defconfig"

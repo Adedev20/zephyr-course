@@ -1,0 +1,2 @@
+# Load Sysbuild board Kconfig descriptions.
+osource "E:/zephyr-projects/zephyr-projects/zephyrproject/deps/zephyr/boards/qemu/x86/Kconfig.sysbuild"
